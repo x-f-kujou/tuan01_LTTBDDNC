@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create getElement</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById('root')
+        const pA = document.createElement("p");
+        pA.innerText = "Nhap a: ";
+        pA.style.fontSize = '18px'
+        const inputA = document.createElement("input");
+        inputA.setAttribute("type", "number");
+
+        const pB = document.createElement("p");
+        pB.innerText = "Nhap b: ";
+        pB.style.fontSize = '18px'
+        const inputB = document.createElement("input");
+        inputB.setAttribute("type", "number");
+
+        const output = document.createElement("input");
+        output.setAttribute("type", "text");
+        output.setAttribute("disabled","disabled");
+
+
+        const button = document.createElement('button')
+        
+        button.innerText = 'Tính Tổng'
+        button.style.fontSize = '18px'
+        button.addEventListener("click",()=>{
+           output.value = Number(inputB.value) + Number(inputB.value);
+        });
+        button.style.display = "block";
+        button.style.margin = "10px";
+
+        root.appendChild(pA);
+        root.appendChild(inputA);
+        root.appendChild(pB);
+        root.appendChild(inputB);
+        root.appendChild(button);
+        root.appendChild(output);
+
+    </script>
+</body>
+</html>
